@@ -48,7 +48,6 @@ if del_product > 0 and del_product <= len(list_products):
     list_products.pop(del_product - 1)
     print(f"Ось ваш оновлений список продуктів: {list_products}")
 
-
 if len(list_products) == 0:
     list_products = input("Давайте додамо ще продуктів. Додайте продукти").split()
     print(f"Ось ваш фінальний список продуктів {list_products}")

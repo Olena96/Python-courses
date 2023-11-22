@@ -207,5 +207,5 @@
 # single_tax = float(input("Введіть процент податку:"))
 # euv = 4422
 #
-# total_salary_per = (salary * (single_tax / 100)) + euv
-# print(total_salary_per)
+# tax_to_pay = (salary * (single_tax / 100)) + euv
+# print(tax_to_pay)

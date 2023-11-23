@@ -12,16 +12,16 @@
 # print(tax_to_pay)
 
 #NEW
-# def calculate_tax(salary, single_tax):
+# def calculate_tax(salary: int | float, single_tax: int | float):
 #     result = (salary * (single_tax / 100)) + 4422
 #     return result
 #
-#
-# user_salary = float(input("Введіть зарплату:"))
-# user_single_tax = float(input("Введіть процент податку:"))
-#
-# tax_to_pay = calculate_tax(salary=user_salary, single_tax=user_single_tax)
-# print(tax_to_pay)
+# #
+# # user_salary = float(input("Введіть зарплату:"))
+# # user_single_tax = float(input("Введіть процент податку:"))
+# #
+# # tax_to_pay = calculate_tax(salary=user_salary, single_tax=user_single_tax)
+# # print(tax_to_pay)
 #_____________________________________________________________________________________________________________
 
 # Задача 2
@@ -63,29 +63,34 @@
 #     print("Такого бути не може")
 
 
-#NEW
-# def add_product():
-#     list = input("Введіть список продуктів через пробіл").split()
-#     print(f"Ось ваш список продуктів: {list}")
-#     return list
-#
-#
-# def delete_product(list):
-#     index = int(input("Який продукт ви вже купили?"))
-#     if 0 < index <= len(list):
-#         list.pop(index - 1)
-#         print(f"Ось ваш оновлений список продуктів: {list}")
-#         return list
-#
-#
-# user_list = add_product()
-#
-# while len(user_list) > 0:
-#     delete_product(list=user_list)
-#
-# if len(user_list) == 0:
-#     user_list = add_product()
-# else:
-#     if len(user_list) > 0:
-#         print(f"Ви ще не все купили. Ось що вам залишилось: {user_list}")
-#         delete_product(list=user_list)
+# NEW
+def add_product(internal_input: str):
+    internal_list = internal_input.split()
+    print(f"Ось ваш список продуктів: {internal_list}")
+    return internal_list
+
+
+def delete_product(internal_index: int, internal_list: list):
+    if 0 < internal_index <= len(internal_list):
+        internal_list.pop(internal_index - 1)
+        print(f"Ось ваш оновлений список продуктів: {internal_list}")
+        return internal_list
+
+
+def manage_products(user_cart: str):
+    user_cart = add_product(internal_input=user_cart)
+
+    while len(user_cart) > 0:
+        user_index = int(input("Який продукт ви вже купили?"))
+        delete_product(internal_index=user_index, internal_list=user_cart)
+
+    if len(user_cart) == 0:
+        user_input = input("Введіть список продуктів через пробіл")
+        add_product(internal_input=user_input)
+    elif len(user_cart) > 0:
+            user_index = int(input("Який продукт ви вже купили?"))
+            delete_product(internal_index=user_index, internal_list=user_cart)
+
+
+user_input = input("Введіть список продуктів через пробіл")
+manage_products(user_cart=user_input)

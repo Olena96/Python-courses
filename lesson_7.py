@@ -16,36 +16,32 @@
 
 
 
-def sort_asc(tuple_numbers: tuple) -> list:
-    sorted_numbers = sorted(list(tuple_numbers))
-    print(sorted_numbers)
+def sort_asc(list_numbers: list) -> list:
+    sorted_numbers = sorted(list_numbers)
     return sorted_numbers
 
 
 # cпробувала заюзати *args
 def sort_args(*args) -> list:
     sorted_numbers = sorted(args)
-    print(sorted_numbers)
     return sorted_numbers
 
 
-def sort_desc(tuple_numbers: tuple) -> list:
-    sorted_numbers = sorted(list(tuple_numbers), reverse=True)
-    print(sorted_numbers)
+def sort_desc(list_numbers: list) -> list:
+    sorted_numbers = sorted(list_numbers, reverse=True)
     return sorted_numbers
 
 
-def sort_words(tuple_words: tuple) -> list:
-    sorted_words = sorted(list(tuple_words), key=len)
-    print(sorted_words)
+def sort_words(list_words: list) -> list:
+    sorted_words = sorted(list_words, key=len)
     return sorted_words
 
 
-random_numbers = (7, 2, 9, 4, 1, 8, 5, 3, 10, 6)
-random_words = ('Автомобіль', 'Яблуко', 'Веселка', 'Магазин', 'Океан', 'Сонце', 'Гірлянда', 'Папуга',
-                'Кавун')
+random_numbers = [7, 2, 9, 4, 1, 8, 5, 3, 10, 6]
+random_words = ['Автомобіль', 'Яблуко', 'Веселка', 'Магазин', 'Океан', 'Сонце', 'Гірлянда', 'Папуга',
+                'Кавун']
 
-sort_asc(tuple_numbers=random_numbers)
-sort_args(7, 2, 9, 4, 1, 8, 5, 3, 10, 6)
-sort_desc(tuple_numbers=random_numbers)
-sort_words(tuple_words=random_words)
+print(sort_asc(list_numbers=random_numbers))
+print(sort_args(7, 2, 9, 4, 1, 8, 5, 3, 10, 6))
+print(sort_desc(list_numbers=random_numbers))
+print(sort_words(list_words=random_words))

@@ -1,6 +1,6 @@
-from lesson_7 import sort_asc
-from lesson_7 import sort_desc
-from lesson_7 import sort_words
+from lesson_7.lesson_7 import sort_asc
+from lesson_7.lesson_7 import sort_desc
+from lesson_7.lesson_7 import sort_words
 
 random_numbers = (7, 2, 9, 4, 1, 8, 5, 3, 10, 6)
 random_words = ('Автомобіль', 'Яблуко', 'Веселка', 'Магазин', 'Океан', 'Сонце', 'Гірлянда', 'Папуга',

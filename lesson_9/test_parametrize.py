@@ -1,6 +1,3 @@
-import pytest
-from lesson_9 import add_three_numbers
-
 # # solution 1
 # def test_1():
 #     assert add_three_numbers(3, 4, 3) == 10
